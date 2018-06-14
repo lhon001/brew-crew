@@ -1,0 +1,7 @@
+<%= form_for @purchase do |f| %>
+  <%= f.label :customer, "Customer Name" %>
+  <%= f.text_field :customer %>
+  <%= f.label :brew, "Brew Name" %>
+  <%= f.collection_select :brew_id, Brew.all, :id, :blend_name %>
+  <%= f.submit %>
+<% end %>

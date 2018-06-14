@@ -1,0 +1,4 @@
+<!-- <p>Hello, World</p> -->
+<h2>Purchase Info </h2>
+<%= link_to "#{@purchase.brew.blend_name}", brew_path(@purchase.brew_id) %>
+<%= link_to "#{@purchase.customer.name}", customer_path(@purchase.customer_id) %>

@@ -6,6 +6,12 @@
   <li>Strength: <%= @brew.strength %></li>
 </ul>
 
+<ul>
+  <% @brew.customers.each do |customer| %>
+    <li><%= link_to customer.name, customer_path(customer) %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit this Coffee', edit_brew_path(@brew) %>
 
 <%= link_to "DELETE THIS COFFEE", @brew, method: :delete, data: { confirm: "Really?" } %>
